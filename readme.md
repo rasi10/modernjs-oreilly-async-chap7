@@ -1,2 +1,2 @@
-## Lecture 4 - Working with AJAX and JSON
-Making get requests with xhr to local json files and putting content into a div.
+## Lecture 5 -Data from an External API - Chuck Norris Project
+Making requests towards an external API - 
