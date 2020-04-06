@@ -1,29 +1,33 @@
-/* async function myFunc(){
-    const promise = new Promise((resolve, reject) =>{
-        setTimeout(() => resolve('Hello'), 1000)
-    })
+const http = new EasyHTTP
 
-    const error = true
+//get users
+/* http.get('https://jsonplaceholder.typicode.com/users')
+.then(data => console.log(data))
+.catch(err => console.log(err))
+ */
 
-    if(!error){
-        const res = await promise
-        return res
-    } else {
-        await Promise.reject(new Error('something went wrong'))
-    }
+//post user
+/* const data ={
+    name: 'John Doe', 
+    username: 'johndoe', 
+    email: 'jdoe@gmail.com'
 }
+http.post('https://jsonplaceholder.typicode.com/users', data)
+.then(data => console.log(data))
+.catch(err => console.log(err)) */
 
-myFunc()
-    .then(res => console.log(res))
-    .catch(err => console.log(err)) */
 
-async function getUsers(){
-    //Await the response of the fetch call
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    //only proceed once its resolved
-    const data = await response.json()
-    //only proceed once second promise is resolved.
-    return data
+//put user
+/* const data ={
+    name: 'John Doe', 
+    username: 'johndoe', 
+    email: 'jdoe@gmail.com'
 }
+http.put('https://jsonplaceholder.typicode.com/users/1', data)
+.then(data => console.log(data))
+.catch(err => console.log(err)) */
 
-getUsers().then(users => console.log(users))
+//delete user
+http.delete('https://jsonplaceholder.typicode.com/users/1')
+.then(data => console.log(data))
+.catch(err => console.log(err)) 
